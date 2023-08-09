@@ -1,0 +1,337 @@
+body{
+	background: #424242;
+	color: black;
+}
+
+figure.gitLink{
+	position: absolute;
+	color: white;
+	width: 130px;
+	height: 130px;
+	transition-duration: .3s;
+	top: 0;
+	display: inline-block;
+	border-radius: 75px;
+	padding: 5px;
+}
+figure.gitLink:hover{
+	background: darkgoldenrod;
+}
+figure.gitLink>img{
+	width: 100%;
+	height: 100%;
+}
+figure.gitLink>a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+div.main{
+/*	background: red;*/
+	margin: 10px auto;
+	display: grid;
+}
+
+div.timer{
+	background: #291602 ;
+	width: 350px;
+	min-height: 50px;
+/*	display: grid;*/
+	grid-column:2;
+	grid-row:1;
+
+}
+
+
+div.notation{
+	background: #B3A79B;
+	width: 80%;
+	margin: 5% auto;
+	height: 42%;
+	padding: 5%;
+	padding-top: 1px;
+	max-height: 300px;
+	position: relative;
+}
+div.notation>h2{
+	font-size: 2em;
+	text-align: center;
+}
+
+div.notation>div.rotationManager{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: -5px;
+	left: -20px;
+	margin: 0;
+	cursor: pointer;
+	font-size: 1.5em;
+	transition-duration: .4s;
+	line-height: 50px;
+	overflow: hidden;
+}
+div.notation>div.rotationManager:hover{
+	color:white;
+	background: #464343;
+	width: 350px;
+
+}
+
+div.notation>div.rotationManager>span{
+	margin-left: 55px;
+}
+div.notation>div.rotationManager>figure{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	margin: 0;
+	cursor: pointer;
+	transition-duration: .4s;
+}
+
+div.notation>div.rotationManager>figure>img{
+	width: 100%;
+	height: 100%;
+
+}
+div.notation>div.rotationManager>figure:hover{
+	transform: rotate(360deg);
+}	
+
+div.notation>div.notationFrame{
+/*	background: red;*/
+	width: 100%;
+	height: 70%;
+	overflow: auto;
+}
+
+div.notation>div::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+div.notation>div::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+div.notation>div::-webkit-scrollbar-button:increment,div.notation>div::-webkit-scrollbar-button {
+    display: none;
+} 
+
+div.notation>div::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+div.notation>div::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #707070;
+}
+
+div.notation>div::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+div.notation>div>p{
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 1em;
+	margin: 0;
+}
+
+div.timer_team{
+	position: relative;
+	width: 90%;
+	height: 20%;
+/*	background: #5E3100;*/
+	background: #161616;
+	vertical-align: text-top;
+	margin: 0 auto;
+	margin-top: 5%;
+	color:white;
+	font-size: 4em;	
+	animation: blink infinite 1s ease;
+	display:flex;
+}
+
+div.timer_team:nth-child(2){
+
+	background: #DAD1C7;
+/*	background: #CAA986;*/
+	margin-top: 10%;
+	color:black;
+}
+
+
+
+div.timer_team>span{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+div.table{
+	position: relative;
+	border: 5px #291602 solid;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+
+div.blackTableScreen{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:black;
+	z-index: 8;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+	display: none;
+}
+
+div.cell{
+	border: 1px solid #291602;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	background-size: cover;
+}
+
+div.dot{
+	position: absolute;
+	display: none;
+	background: transparent;
+	width: 100%;
+	height: 100%;
+}
+
+div.dot:before{
+	content: '';
+	background: #31B505;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left:calc(50% - 15px);
+	top:calc(50% - 15px);
+	border-radius: 100%;
+}
+
+div.pCell{
+	width: 100%;
+	height: 100%;
+}
+div.pCell>figure{
+/*	background: blue;*/
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+div.pCell>figure>img{
+	width: 100%;
+}
+
+
+
+
+@keyframes blink{
+	1%{
+		box-shadow: 0 0 20px #42C900;
+	}
+}
+
+
+
+
+
+/*PROMOTE FRAME*/
+div.promoteFrame{
+	position: absolute;
+	top: 550px;
+	left: 203.5px;
+	z-index: 9;
+	display: none;
+}
+div.promoteFrame>figure{
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+	background: grey;
+	border-radius: 100%;
+}
+div.promoteFrame>figure>img{
+	width: 85%;
+	height: 85%;
+	margin: 7.5% 7.5%;
+	cursor: pointer;
+	transition-duration: .3s;
+}
+div.promoteFrame>figure>img:hover{
+	width: 95%;
+	height: 95%;
+	margin: 2.5% 2.5%;
+}
+
+
+
+
+
+div.gameOver{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: -100%;
+	left: 0;
+	z-index: 5;
+	background: rgba(0,0,0,.65);
+	transition-duration: .5s;
+}
+div.gameOver>div.close{
+	content: "X";
+	font-size: 5em;
+	color: white;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	right: 25px;
+	top: 25px;
+	z-index: 90;
+	line-height: 70px;
+	text-align: center;
+	cursor: pointer;
+	font-family: monospace;
+}
+
+
+div.gameOver>div.message{
+	width: 50%;
+	background: #DFDFDF;
+	margin: 15vh auto;
+	padding: 20px;
+}
+div.gameOver>div.message>*{
+	margin: 0;
+}
+div.gameOver>div.message>h2{
+	text-align: center;
+	font-size: 3em;
+}
+div.gameOver>div.message>p{
+	margin-top: 10px;
+	min-height: 10vh;
+	line-height: 10vh;
+	text-align: center;
+	font-size: 2.5em;
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Nicolas Alegre">
+	<title>Chess</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	
+<div id="Timer" class="timer">
+	<div class="notation">
+		<h2>Movimientos</h2>
+		<div class="rotationManager">
+			<figure><img onclick="rotateTable();" src="img/rotate.png"></img></figure>
+			<span onclick="updateAutoRotation()" id="AutoRot_txt">Rotación automática : ON</span>
+		</div>
+
+		<div id="NotationFrame" class="notationFrame">
+		</div>
+	</div>
+	<div id="WhiteTimer" class="timer_team"><span>03:00</span></div>
+	<div id="BlackTimer" class="timer_team"><span>03:00</span></div>
+</div> 
+
+
+
+<div id="promoteFrameWhite" class="promoteFrame">
+		<figure><img src="img/wTower.png" alt="pieceImg" onclick="promotePawn('tower','white');"></figure>
+		<figure><img src="img/wBishop.png" alt="pieceImg" onclick="promotePawn('bishop','white');"></figure>
+		<figure><img src="img/wKnight.png" alt="pieceImg" onclick="promotePawn('knight','white');"></figure>
+		<figure><img src="img/wQueen.png" alt="pieceImg" onclick="promotePawn('queen','white');"></figure>
+</div>
+
+<div id="promoteFrameBlack" class="promoteFrame">
+		<figure><img src="img/bTower.png" alt="pieceImg" onclick="promotePawn('tower','black');"></figure>
+		<figure><img src="img/bBishop.png" alt="pieceImg" onclick="promotePawn('bishop','black');"></figure>
+		<figure><img src="img/bKnight.png" alt="pieceImg" onclick="promotePawn('knight','black');"></figure>
+		<figure><img src="img/bQueen.png" alt="pieceImg" onclick="promotePawn('queen','black');"></figure>
+</div>
+
+
+<figure class="gitLink">
+	<img src="img/gitLogo.png"><a href="https://github.com/Nickock/chess" target="blank"></a></img>
+</figure>
+
+<div id="Main" class="main"></div>
+
+
+<div class="gameOver" id="GameOver">
+	<div class="close"onclick="document.getElementById('GameOver').style.top = '-100%'; ">X</div>
+	<div class="message">
+		<h2>Fin del juego</h2>
+		<p id="GameOverMessage">jaque mate, las blancas ganan</p>
+	</div>
+</div>
+
+<script src="scripts/utils.js"></script>
+<script src="scripts/pieceMovements.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/timer.js"></script>
+
+
+
+</body>
+</html>

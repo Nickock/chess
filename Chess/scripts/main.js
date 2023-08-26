@@ -279,12 +279,12 @@ function setPieces(){
 
 		}else
 		if(x==1|| x==6){
-			createPiece(x,0,"bishop","white");
-			createPiece(x,7,"bishop","black");
-		}else
-		if(x==2|| x==5){
 			createPiece(x,0,"knight","white");
 			createPiece(x,7,"knight","black");
+		}else
+		if(x==2|| x==5){
+			createPiece(x,0,"bishop","white");
+			createPiece(x,7,"bishop","black");
 		}else
 		if(x==3){
 			createPiece(x,0,"queen","white");
@@ -303,8 +303,6 @@ function setPieces(){
 
 //establece el tamaño de los interfaces al coronar un peon, en funcion de cellSize;
 function setPromoteFrames(){
-	//whitePromoteFrame.style.width = cellSize+"px";
-	//whitePromoteFrame.style.height= 4*cellSize+"px";
 	whitePromoteFrame.style.width = cellSize+"px";
 	whitePromoteFrame.style.height= 4*cellSize+"px";
 	blackPromoteFrame.style.width = cellSize+"px";
@@ -321,19 +319,11 @@ Main.style.width = ((cellSize + 2)*8)+350 + "px";
 setPieces();
 
 
-//DEVELOPEMENT;
-/*createPiece(4,0,"king","white");
-createPiece(4,7,"king","black");
-createPiece(0,6,"pawn","white");
 
-createPiece(3,0,"tower","white");
-createPiece(5,0,"tower","white");
-createPiece(2,1,"queen","white");
-*/
 setPromoteFrames();
 
-//whiteKing = getPCell(2,1);//modificar luego
+
 whiteKing = getPCell(4,0);
-//blackKing = getPCell(7,7);//modificar luego
+
 blackKing = getPCell(4,7);
 
